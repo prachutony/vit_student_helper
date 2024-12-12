@@ -242,10 +242,7 @@ def cgpa_page_2():
 
 def main():
     with st.sidebar:
-        navigated = option_menu(
-            menu_title=None,
-            options=["GPA Calculator" , "CGPA Calculator" , "CGPA Calculator for Students with backlog history"]
-        )
+        navigated = st.selectbox("Choose your page:",["GPA Calculator" , "CGPA Calculator" , "CGPA Calculator for Students with backlog history"])
     if navigated == "GPA Calculator":
         st.header("GPA CALCULATOR")
         gpa_page()
